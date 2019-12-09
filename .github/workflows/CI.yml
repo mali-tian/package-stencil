@@ -9,6 +9,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v1
+    - name: Vulnerabilities Checking
+      run: npm audit
     - name: Run Unit Test Coverage
       run: auto/test-coverage
     - name: Run Eslint
