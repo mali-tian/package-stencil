@@ -1,6 +1,7 @@
 .eslintignore
 .eslintrc
 .prettierrc
+.buildkite/*
 CHANGELOG
 readme.hbs
 README.hbs
