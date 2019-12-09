@@ -3,7 +3,7 @@ name: CI
 on: [push]
 
 jobs:
-  unit-test:
+  checking:
 
     runs-on: ubuntu-latest
 
@@ -11,3 +11,5 @@ jobs:
     - uses: actions/checkout@v1
     - name: Run Unit Test Coverage
       run: auto/test-coverage
+    - name: Run Eslint
+      run: auto/lint
