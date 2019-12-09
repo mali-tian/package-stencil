@@ -1,0 +1,6 @@
+#! /bin/bash -e
+
+cd $(dirname $0)/..
+
+docker run -v $(pwd):/work -w /work node:10-alpine \
+       sh -c 'npm publish'

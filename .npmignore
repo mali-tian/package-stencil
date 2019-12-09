@@ -1,0 +1,12 @@
+.eslintignore
+.eslintrc
+.prettierrc
+CHANGELOG
+readme.hbs
+README.hbs
+.DS_Store
+src/*.spec.js
+.nyc_output/
+.nycrc
+auto/
+coverage/

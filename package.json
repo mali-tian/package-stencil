@@ -1,0 +1,52 @@
+{
+  "name": "package-stencil",
+  "version": "1.0.0",
+  "description": "This project is a stencil of node package",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha **/*.test.js --exit",
+    "coverage": "nyc --reporter=lcov --reporter=text-summary npm test",
+    "eslint": "eslint .",
+    "eslint-fix": "eslint . --fix",
+    "style": "lint-staged"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged && npm run coverage",
+      "pre-push": "lint-staged && npm run coverage"
+    }
+  },
+  "lint-staged": {
+    "**/*.js": [
+      "npm run eslint-fix",
+      "git add"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:mali-tian/package-stencil.git"
+  },
+  "keywords": [
+    "package-stencil"
+  ],
+  "dependencies": {
+    "lodash": "4.17.15"
+  },
+  "devDependencies": {
+    "chai": "4.1.2",
+    "chai-as-promised": "7.1.1",
+    "eslint": "6.5.1",
+    "eslint-config-airbnb": "18.0.1",
+    "eslint-config-prettier": "6.4.0",
+    "eslint-plugin-import": "2.18.2",
+    "eslint-plugin-jsx-a11y": "6.2.3",
+    "eslint-plugin-prettier": "3.1.1",
+    "eslint-plugin-react": "7.16.0",
+    "eslint-plugin-security": "1.4.0",
+    "husky": "3.0.9",
+    "lint-staged": "9.4.2",
+    "mocha": "5.0.0",
+    "nyc": "14.1.1",
+    "prettier": "1.18.2"
+  }
+}

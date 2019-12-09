@@ -1,0 +1,11 @@
+{
+  "plugins": ["security", "prettier"],
+  "extends": ["airbnb", "plugin:security/recommended", "prettier"],
+  "env": {
+    "node": true,
+    "mocha": true
+  },
+  "rules": {
+    "prettier/prettier": "error"
+  }
+}
