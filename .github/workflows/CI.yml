@@ -10,4 +10,6 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Run Unit Test Coverage
-      run: npm run coverage
+      run: |
+        npm install
+        npm run coverage
