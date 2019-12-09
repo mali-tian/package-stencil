@@ -1,0 +1,26 @@
+name: CI
+
+on: [push]
+
+jobs:
+  checking:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Vulnerabilities Checking
+      run: npm audit
+    - name: Run Unit Test Coverage
+      run: auto/test-coverage
+    - name: Run Eslint
+      run: auto/lint
+
+  build:
+    needs: "checking"
+
+    runs-on: ubuntu-latest
+    steps:
+        - uses: actions/checkout@v1
+        - name: Build package
+          run: auto/build
