@@ -1,6 +1,6 @@
+![](https://github.com/mali-tian/package-stencil/workflows/CI/badge.svg?branch=master)
 # App Tools Stencil
 
-![](https://github.com/mali-tian/package-stencil/workflows/CI.yml/badge.svg)
 A stencil for application tool for node packages, will include some basic code.
 
 ## Run Test with Coverage
