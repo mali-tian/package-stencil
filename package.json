@@ -30,7 +30,7 @@
     "package-stencil"
   ],
   "dependencies": {
-    "lodash": "4.17.15"
+    "lodash": "4.17.21"
   },
   "devDependencies": {
     "chai": "4.1.2",
